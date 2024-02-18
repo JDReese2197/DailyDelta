@@ -1,30 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    theme: {
-      screens: {
-        sm: '480px',
-        md: '768px',
-        lg: '976px',
-        xl: '1440px',
-      },
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js}"
+  ],
+  purge: [
+    "./src/assets/*.css"
+  ],
+  darkMode: false,
+  theme: {
+    fontFamily: {
+      'helv': ['Helvetica', 'Arial', 'sans-serif']
+    },
+    extend: {
       colors: {
-        'blue': '#1fb6ff',
-        'pink': '#ff49db',
-        'orange': '#ff7849',
-        'green': '#13ce66',
-        'gray-dark': '#273444',
-        'gray': '#8492a6',
-        'gray-light': '#d3dce6',
+        'spotify-purple-light': '#b023c2ff',
+        'spotify-purple': '#8a17d3ff',
+        'spotify-purple-dark': '#620ce6ff',
+        'spotify-green': '#169c46',
       },
-      fontFamily: {
-        sans: ['Graphik', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
-      },
-      extend: {
-        spacing: {
-          '128': '32rem',
-          '144': '36rem',
-        }
-      }
-    }
-  }
+    },
+  },
+  plugins: [],
+}
